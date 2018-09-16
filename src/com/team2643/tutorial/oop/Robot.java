@@ -5,6 +5,7 @@ import java.awt.Point;
 public class Robot {
 	private String name = "";
 	private Point location = new Point();
+	private Direction direction = Direction.NORTH;
 	
 	public Robot(String name) {
 		setName(name);
@@ -16,6 +17,14 @@ public class Robot {
 	
 	public void moveBackward(Integer distance) {
 		move(-distance);
+	}
+	
+	public Direction getDirection() {
+		return this.direction;
+	}
+	
+	public void setDirection(Direction direction) {
+		this.direction = direction;
 	}
 		
 	public Point getLocation() {
@@ -31,8 +40,24 @@ public class Robot {
 	}
 	
 	private void move(Integer distance) {
-		Integer y = getLocation().y + distance;
-		getLocation().move(getLocation().x, y);
+		Integer x, y = 0;
+		switch(getDirection()) {
+			case NORTH :
+				y = getLocation().y + distance;
+				getLocation().move(getLocation().x, y);
+				break;
+			case EAST :
+				x = getLocation().x - distance;
+				getLocation().move(x, getLocation().y);
+				break;			
+			case SOUTH :
+				y = getLocation().y - distance;
+				getLocation().move(getLocation().x, y);
+				break;			
+			case WEST :
+				x = getLocation().x + distance;
+				getLocation().move(x, getLocation().y);
+				break;			
+		}
 	}
-
 }

@@ -8,11 +8,15 @@ public class RobotWorld {
 		Robot firstRobotObject = new Robot("C-3PO");
 		printRobotInfo(firstRobotObject);
 		firstRobotObject.moveForward(100);
+		firstRobotObject.setDirection(Direction.EAST);
+		firstRobotObject.moveForward(50);
 		printRobotInfo(firstRobotObject);
 		
 		Robot secondRobotObject = new Robot("R2-D2");
 		printRobotInfo(secondRobotObject);
 		secondRobotObject.moveBackward(50);
+		secondRobotObject.setDirection(Direction.WEST);
+		secondRobotObject.moveForward(100);
 		printRobotInfo(secondRobotObject);
 	}
 	
@@ -20,6 +24,7 @@ public class RobotWorld {
 		System.out.println("\nRobot object ID: " + robot);
 		System.out.println("Robot name: " + robot.getName());
 		System.out.println("Robot location: [x=" + robot.getLocation().x + ",y=" + robot.getLocation().y + "]");
+		System.out.println("Robot direction: " + robot.getDirection());
 	}
 
 }
