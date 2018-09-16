@@ -9,13 +9,13 @@ public class RobotWorld {
 		printRobotInfo(firstRobotObject);
 		
 		Robot secondRobotObject = new Robot("R2-D2");
-		printRobotInfo(secondRobotObject);
-		
+		printRobotInfo(secondRobotObject);		
 	}
 	
 	private static void printRobotInfo(Robot robot) {
 		System.out.println("\nRobot object ID: " + robot);
 		System.out.println("Robot name: " + robot.getName());
+		System.out.println("Robot location: [x=" + robot.getLocation().x + ",y=" + robot.getLocation().y + "]");
 	}
 
 }
