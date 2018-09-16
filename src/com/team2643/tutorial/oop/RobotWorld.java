@@ -7,9 +7,13 @@ public class RobotWorld {
 		
 		Robot firstRobotObject = new Robot("C-3PO");
 		printRobotInfo(firstRobotObject);
+		firstRobotObject.moveForward(100);
+		printRobotInfo(firstRobotObject);
 		
 		Robot secondRobotObject = new Robot("R2-D2");
-		printRobotInfo(secondRobotObject);		
+		printRobotInfo(secondRobotObject);
+		secondRobotObject.moveBackward(50);
+		printRobotInfo(secondRobotObject);
 	}
 	
 	private static void printRobotInfo(Robot robot) {
