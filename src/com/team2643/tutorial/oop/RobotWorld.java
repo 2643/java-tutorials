@@ -8,14 +8,14 @@ public class RobotWorld {
 		Robot firstRobotObject = new Robot("C-3PO");
 		printRobotInfo(firstRobotObject);
 		firstRobotObject.moveForward(100);
-		firstRobotObject.setDirection(Direction.EAST);
+		firstRobotObject.setEasternMotion();
 		firstRobotObject.moveForward(50);
 		printRobotInfo(firstRobotObject);
 		
 		Robot secondRobotObject = new Robot("R2-D2");
 		printRobotInfo(secondRobotObject);
 		secondRobotObject.moveBackward(50);
-		secondRobotObject.setDirection(Direction.WEST);
+		secondRobotObject.setWesternMotion();
 		secondRobotObject.moveForward(100);
 		printRobotInfo(secondRobotObject);
 	}
