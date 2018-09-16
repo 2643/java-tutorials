@@ -15,6 +15,7 @@ public class RobotWorld {
 	
 	private static void printRobotInfo(Robot robot) {
 		System.out.println("\nRobot object ID: " + robot);
+		System.out.println("Robot name: " + robot.getName());
 	}
 
 }
